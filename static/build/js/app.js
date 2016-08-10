@@ -241,6 +241,7 @@ l=h.substring(0,l.length)!==l?g(""):new g(h.substring(l.length)),l._parentURI=th
           });
         }
         else{
+          alert('failure!');
           clearInterval(animationInterval);
           $('#you_location_img').css('background-position', '0px 0px');
         }
