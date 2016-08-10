@@ -233,7 +233,7 @@ l=h.substring(0,l.length)!==l?g(""):new g(h.substring(l.length)),l._parentURI=th
           navigator.geolocation.getCurrentPosition(function(position) {
             var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
             marker.setPosition(latlng);
-            map.setZoom(18);
+            map.setZoom(16);
             map.setCenter(latlng);
             clearInterval(animationInterval);
             $('#you_location_img').css('background-position', '-144px 0px');
