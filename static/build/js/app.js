@@ -229,7 +229,8 @@ l=h.substring(0,l.length)!==l?g(""):new g(h.substring(l.length)),l._parentURI=th
           else imgX = '-18';
           $('#you_location_img').css('background-position', imgX+'px 0px');
         }, 500);
-        if(navigator.geolocation) {
+        if (navigator.geolocation) {
+          console.log('success!');
           navigator.geolocation.getCurrentPosition(function(position) {
             var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
             marker.setPosition(latlng);
