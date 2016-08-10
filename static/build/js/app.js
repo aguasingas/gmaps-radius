@@ -240,7 +240,11 @@ l=h.substring(0,l.length)!==l?g(""):new g(h.substring(l.length)),l._parentURI=th
             map.setCenter(latlng);
             clearInterval(animationInterval);
             $('#you_location_img').css('background-position', '-144px 0px');
-          });
+          },
+            function (err) {
+              alert('ERROR(' + err.code + '): ' + err.message);
+            }
+          );
         }
         else{
           alert('failure!');
