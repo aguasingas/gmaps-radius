@@ -230,7 +230,7 @@ l=h.substring(0,l.length)!==l?g(""):new g(h.substring(l.length)),l._parentURI=th
           $('#you_location_img').css('background-position', imgX+'px 0px');
         }, 500);
         if (navigator.geolocation) {
-          console.log('success!');
+          alert('success!');
           navigator.geolocation.getCurrentPosition(function(position) {
             var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
             marker.setPosition(latlng);
