@@ -230,10 +230,7 @@ l=h.substring(0,l.length)!==l?g(""):new g(h.substring(l.length)),l._parentURI=th
           $('#you_location_img').css('background-position', imgX+'px 0px');
         }, 500);
         if (navigator.geolocation) {
-          alert('success!');
           navigator.geolocation.getCurrentPosition(function(position) {
-            alert('position!');
-            alert(position);
             var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
             marker.setPosition(latlng);
             map.setZoom(18);
@@ -242,12 +239,10 @@ l=h.substring(0,l.length)!==l?g(""):new g(h.substring(l.length)),l._parentURI=th
             $('#you_location_img').css('background-position', '-144px 0px');
           },
             function (err) {
-              alert('ERROR(' + err.code + '): ' + err.message);
             }
           );
         }
         else{
-          alert('failure!');
           clearInterval(animationInterval);
           $('#you_location_img').css('background-position', '0px 0px');
         }
