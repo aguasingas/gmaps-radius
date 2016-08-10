@@ -232,6 +232,8 @@ l=h.substring(0,l.length)!==l?g(""):new g(h.substring(l.length)),l._parentURI=th
         if (navigator.geolocation) {
           alert('success!');
           navigator.geolocation.getCurrentPosition(function(position) {
+            alert('position!');
+            alert(position);
             var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
             marker.setPosition(latlng);
             map.setZoom(18);
